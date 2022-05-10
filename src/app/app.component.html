@@ -1,0 +1,21 @@
+<script src="https://js.pusher.com/7.0.3/pusher.min.js"></script>
+<div>
+  <div>
+    <label>Username</label>
+    <input type="text" [(ngModel)]="username" />
+  </div>
+  <div class="messages">
+    <span *ngFor="let item of messages">{{ item }}</span>
+  </div>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Mensaje</label>
+      <input
+        type="text"
+        [(ngModel)]="message"
+        placeholder="Escribe un mensaje"
+      />
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
